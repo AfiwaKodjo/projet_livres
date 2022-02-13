@@ -106,6 +106,26 @@ EXEMPLE:http://localhost:5000/livres
   "total_livres": 2
 }
 
+ ## GET/livres(id)
+
+GENERAL: cet endpoint permet de récupérer un livre en particulier.
+        Les résultats de cette requete se présentent comme suit: 
+EXEMPLE :GET http://localhost:5000/livres/5
+
+{
+  "id": 5, 
+  "livre": {
+    "auteur": "lovestory", 
+    "categorie_id": 1, 
+    "date_publication": "Fri, 14 Feb 2020 00:00:00 GMT", 
+    "editeur": "loveyou", 
+    "id": 5, 
+    "isbn": "europe", 
+    "titre": "amour ou amitie"
+  }, 
+  "success": true
+}
+
 . ## SUPPRIMER/livres (liv_id)
 
 GENERAL: Cet endpoint permet de supprimer un etudiant
@@ -160,6 +180,21 @@ EXEMPLE :DELETE http://localhost:5000/livres/4
   "total_categorie": 3
 }
 
+## GET/categories(cate_id)
+
+GENERAL: cet endpoint permet de récupérer une catégorie en particulier.
+        Les résultats de cette requete se présentent comme suit: 
+EXEMPLE :GET http://localhost:5000/categories/2
+
+{
+  "categorie": {
+    "id": 2, 
+    "libelle_categorie": "aventure"
+  }, 
+  "id": 2, 
+  "success": true
+}
+
 . ## SUPPRIMER/categories (cat_id)
 GENERAL: Cet endpoint permet de supprimer une catégorie
         Les resulats de cette requete se présentent comme suit:
@@ -183,4 +218,44 @@ GENERAL: Cet endpoint permet de supprimer une catégorie
     "libelle_categorie": "contes"
   }
   
+  . ## GET/categories/categ(cate_id)
+  
+  GENERAL: cet endpoint permet de lister une catégorie
+  
+  EXEMPLE:GET http://localhost:5000/categories/categ/2
+  
+  {
+  "Liste_categorie": {
+    "id": 2, 
+    "libelle_categorie": "aventure"
+  }, 
+  "success": true
+}
+
+. ## GET /categories/<int:id>/livres
+  
+  GENERAL: cet endpoint permet de lister les livres d'une catégorie
+  
+  EXEMPLE:GET http://localhost:5000/categories/1/livres
+  
+  {
+  "classe": {
+    "id": 1, 
+    "libelle_categorie": "contes"
+  }, 
+  "livres": [
+    {
+      "auteur": "lovestory", 
+      "categorie_id": 1, 
+      "date_publication": "Fri, 14 Feb 2020 00:00:00 GMT", 
+      "editeur": "loveyou", 
+      "id": 5, 
+      "isbn": "europe", 
+      "titre": "amour ou amitie"
+    }
+  ], 
+  "success": true, 
+  "total_livre": 1
+}
+
 
