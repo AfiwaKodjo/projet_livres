@@ -6,7 +6,7 @@ Cette API permet de gérer les livres d'une bibliothèque.
 
 ###  Installation des dépendances
 
-#### Python 3.9.6
+#### Python 3.9.10
 #### pip 21.1.3 from c:\users\kodjo\appdata\local\programs\python\python39\lib\site-packages\pip (python 3.9)
 
 Si vous n'avez pas python installé, merci de suivre cet URL pour l'installer [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
