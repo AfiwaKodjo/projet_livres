@@ -140,7 +140,7 @@ EXEMPLE :DELETE http://localhost:5000/livres/4
  . ##PATCH/livres(id)
  GÉNÉRALITÉS:
  Ce point de terminaison est utilisé pour mettre à jour un livre de la bibliothèque.
- Nous retournons un lvre que nous mettons à jour
+ Nous retournons un livre que nous mettons à jour
  
   EXEMPLE..... Avec patch
   PATCH http://localhost:5000/livres/5
